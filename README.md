@@ -5,6 +5,7 @@ Many thanks to FreeCodeCamp, whose "SQLite Databases With Python" Course was ess
 
 to use it:
 1 - open Git Bash and enter cd/(directory of where the files are).
+
 2 - enter 'python ourapp.py'.
 
 Currently you can add, delete and show the full contents of the database.
