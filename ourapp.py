@@ -16,5 +16,5 @@ if value == 2:
     database.add_one(first_name,last_name,email)
 
 if value == 3:
-    id = str(input("insert the id you'd like to delete:"))
+    id = str(input("insert the id of the object you'd like to delete:"))
     database.delete_one(id)
