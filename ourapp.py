@@ -34,5 +34,3 @@ if value == 3:
 #     ('Tony', 'Soprano', 'tony@soprano.com')
 #     ]
 # database.add_many(stuff)
-if value == 4:
-    print("te fode isaac")
