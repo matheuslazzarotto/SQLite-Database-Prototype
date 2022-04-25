@@ -4,6 +4,7 @@ which consists in using Python and SQLite to prototype a database that will stor
 Many thanks to FreeCodeCamp, whose "SQLite Databases With Python" Course was essential for this project.
 
 to use it:
+
 1 - open Git Bash and enter cd/(directory of where the files are).
 
 2 - enter 'python ourapp.py'.
