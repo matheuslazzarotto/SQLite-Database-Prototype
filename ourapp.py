@@ -18,19 +18,3 @@ if value == 2:
 if value == 3:
     id = str(input("insert the id you'd like to delete:"))
     database.delete_one(id)
-
-#show db
-#database.show_all()
-
-#add a record to the db
-#database.add_one("Laura","Smith","laura@smith.com")
-
-#delete record (use row id as string in the '()')
-#database.delete_one()
-
-#add more than one record to the list
-# stuff = [
-#     ('Brenda', 'Seinfield', 'brenda@smitherton.com'),
-#     ('Tony', 'Soprano', 'tony@soprano.com')
-#     ]
-# database.add_many(stuff)
