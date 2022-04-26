@@ -1,20 +1,37 @@
-import database
+from termios import CINTR
+import functions
 import sqlite3
 
-print("Welcome to the database. Your options are:")
-print("1 - Show the database's current contents;")
-print("2 - Add an object to the database;")
-print("3 - Delete an object from the database;")
+while(True):
+    print(" ")
+    print("Welcome to the database. Your options are:")
+    print("1 - Show the database's current contents;")
+    print("2 - Add an object to the database;")
+    print("3 - Delete an object from the database;")
+    print("4 - Fetch one object from the database;")
+    print("5 - End program.")
+    print()
+    value = float(input("Please choose an option: "))
+    
+    if value == 1:
+        functions.show_all()
+        continue
 
-value = float(input("Please choose an option: "))
-if value == 1:
-    database.show_all()
-if value == 2:
-    first_name = input("please insert the first name: ")
-    last_name = input("please insert the last name: ")
-    email = input("please insert the email: ")
-    database.add_one(first_name,last_name,email)
+    elif value == 2:
+        first_name = input("please insert the first name: ")
+        last_name = input("please insert the last name: ")
+        email = input("please insert the email: ")
+        functions.add_one(first_name,last_name,email)
+        continue
 
-if value == 3:
-    id = str(input("insert the id of the object you'd like to delete:"))
-    database.delete_one(id)
+    elif value == 3:
+        id = str(input("insert the id of the object you'd like to delete: "))
+        functions.delete_one(id)
+        continue
+    
+    elif value == 4:
+        id = str(input("insert the first name of the object you'd like to fetch: "))
+        op = input("Insert 1 to name, 2 to lastname and 3 to email!")
+        functions.fetch_one(id, op)
+        continue
+    break
