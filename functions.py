@@ -38,25 +38,25 @@ def add_many(list):
     conn.commit()
     conn.close()
     
-# def fetch_one(id):
-#     conn = sqlite3.connect('customer.db')
-#     c = conn.cursor()
-#     c.execute("SELECT * from customers WHERE rowid = (?)", id)
-#     row = c.fetchone()
-#     print(row)
-#     conn.commit()
-#     conn.close()
-    
-def fetch_one(id, op):
+def fetch_one(id):
     conn = sqlite3.connect('customer.db')
     c = conn.cursor()
-    if op == 1:
-        c.execute("SELECT first_name from customers WHERE rowid = (?)", id)
-    elif op == 2:
-        c.execute("SELECT last_name from customers WHERE rowid = (?)", id)
-    else:
-        c.execute("SELECT email from customers WHERE rowid = (?)", id)
+    c.execute("SELECT * from customers WHERE rowid = (?)", id)
     row = c.fetchone()
     print(row)
     conn.commit()
     conn.close()
+    
+# def fetch_one(id, op):
+#     conn = sqlite3.connect('customer.db')
+#     c = conn.cursor()
+#     if op == 1:
+#         c.execute("SELECT first_name from customers WHERE rowid = (?)", id)
+#     elif op == 2:
+#         c.execute("SELECT last_name from customers WHERE rowid = (?)", id)
+#     else:
+#         c.execute("SELECT email from customers WHERE rowid = (?)", id)
+#     row = c.fetchone()
+#     print(row)
+#     conn.commit()
+#     conn.close()

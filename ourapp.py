@@ -30,8 +30,7 @@ while(True):
         continue
     
     elif value == 4:
-        id = str(input("insert the first name of the object you'd like to fetch: "))
-        op = input("Insert 1 to name, 2 to lastname and 3 to email!")
-        functions.fetch_one(id, op)
+        id = str(input("insert the id of the object you'd like to fetch: "))
+        functions.fetch_one(id)
         continue
     break
