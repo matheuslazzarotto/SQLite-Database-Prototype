@@ -25,12 +25,12 @@ while(True):
         continue
 
     elif value == 3:
-        id = str(input("insert the id of the object you'd like to delete: "))
+        id = str(input("insert the ID of the object you'd like to delete: "))
         functions.delete_one(id)
         continue
     
     elif value == 4:
-        id = str(input("insert the first name of the object you'd like to fetch: "))
+        id = str(input("insert the ID of the object you'd like to fetch: "))
         op = input("Insert 1 to name, 2 to lastname and 3 to email!")
         functions.fetch_one(id, op)
         continue
