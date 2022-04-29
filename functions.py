@@ -15,10 +15,12 @@ def show_all():
     conn.close()
 
 #add new record to the db
-def add_one(slope_name,slope_lat,declivity,houses_per_square_meter,trees_per_square_meter,liquid_proximity,soil_umidity):
+def add_one(slope_name,slope_lat,declivity,houses_per_square_meter,
+trees_per_square_meter,liquid_proximity,soil_umidity):
     conn = sqlite3.connect('variables.db')
     c = conn.cursor()
-    c.execute("INSERT INTO variables VALUES (?,?,?,?,?,?,?,?)", (slope_name,slope_lat,declivity,houses_per_square_meter,trees_per_square_meter,liquid_proximity,soil_umidity))
+    c.execute("INSERT INTO variables VALUES (?,?,?,?,?,?,?,?)", (slope_name,slope_lat,declivity,houses_per_square_meter,
+    trees_per_square_meter,liquid_proximity,soil_umidity))
     conn.commit()
     conn.close()
 
