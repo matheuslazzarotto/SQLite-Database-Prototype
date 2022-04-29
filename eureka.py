@@ -17,15 +17,6 @@ while(True):
         continue
 
     elif value == 2:
-        slope_name= input("please insert the name of the slope: ")
-        slope_lat= input("please insert the slope latitude: ")
-        slope_long= input("please insert the slope longitude: ")
-        declivity= input("please insert the slope's declivity: ")
-        houses_per_square_meter= input("please insert the number of houses per square meter: ")
-        trees_per_square_meter= input("please insert the number of trees per square meter: ")
-        liquid_proximity= input("please insert the proximity to liquid surfaces: ")
-        soil_umidity= input("please insert the coeficient for soil humidity: ")
-
         functions.add_one(slope_name,slope_lat,slope_long,declivity,houses_per_square_meter,
         trees_per_square_meter,liquid_proximity,soil_umidity)
 
