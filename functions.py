@@ -37,7 +37,9 @@ def add_many(list):
     c.executemany("INSERT INTO customers VALUES (?,?,?)", (list))
     conn.commit()
     conn.close()
-    
+
+
+ #bug: only outputs email   
 def fetch_one(id, op):
     conn = sqlite3.connect('customer.db')
     c = conn.cursor()
