@@ -3,11 +3,11 @@ import sqlite3
 #query the database and return all records
 def show_all():
     #connect to db
-    conn = sqlite3.connect('customer.db')
+    conn = sqlite3.connect('variables.db')
     #create a cursor
     c = conn.cursor()
     #query the db
-    c.execute ("SELECT rowid, * FROM customers")
+    c.execute ("SELECT rowid, * FROM variables")
     items = c.fetchall()
     for item in items:
         print(item)
@@ -15,33 +15,33 @@ def show_all():
     conn.close()
 
 #add new record to the db
-def add_one(first,last,email):
-    conn = sqlite3.connect('customer.db')
+def add_one(slope_name,slope_lat,declivity,houses_per_square_meter,trees_per_square_meter,liquid_proximity,soil_umidity):
+    conn = sqlite3.connect('variables.db')
     c = conn.cursor()
-    c.execute("INSERT INTO customers VALUES (?,?,?)", (first,last,email))
+    c.execute("INSERT INTO variables VALUES (?,?,?,?,?,?,?,?)", (slope_name,slope_lat,declivity,houses_per_square_meter,trees_per_square_meter,liquid_proximity,soil_umidity))
     conn.commit()
     conn.close()
 
 #deleting a record of the db
 def delete_one(id):
-    conn = sqlite3.connect('customer.db')
+    conn = sqlite3.connect('variables.db')
     c = conn.cursor()
-    c.execute("DELETE from customers WHERE rowid = (?)", id)
+    c.execute("DELETE from variables WHERE rowid = (?)", id)
     conn.commit()
     conn.close()
 
 #add more than one record to the list
 def add_many(list):
-    conn = sqlite3.connect('customer.db')
+    conn = sqlite3.connect('variables.db')
     c = conn.cursor()
-    c.executemany("INSERT INTO customers VALUES (?,?,?)", (list))
+    c.executemany("INSERT INTO variables VALUES (?,?,?)", (list))
     conn.commit()
     conn.close()
     
 def fetch_one(id):
-    conn = sqlite3.connect('customer.db')
+    conn = sqlite3.connect('variables.db')
     c = conn.cursor()
-    c.execute("SELECT * from customers WHERE rowid = (?)", id)
+    c.execute("SELECT * from variables WHERE rowid = (?)", id)
     row = c.fetchone()
     print(row)
     conn.commit()
