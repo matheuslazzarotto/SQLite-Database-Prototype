@@ -8,4 +8,4 @@ a prototype that I'm working on for my uni project, which consists in using Pyth
 
 'functions.py' is where all functions are stored.
 
-many thanks to freeCodeCamp, whose 'SQLite Databases With Python' course was extremely helpful. Many thanks to some friends as well (Aleixo, Isaac and Erick)
+shout-out to freeCodeCamp, whose 'SQLite Databases With Python' course was extremely helpful. many thanks to some friends as well (Aleixo, Isaac and Erick)
