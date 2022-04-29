@@ -1,4 +1,3 @@
-from termios import CINTR
 import functions
 import sqlite3
 
