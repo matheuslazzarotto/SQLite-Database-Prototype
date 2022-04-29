@@ -25,7 +25,8 @@ while(True):
         trees_per_square_meter= input("please insert the number of trees per square meter: ")
         liquid_proximity= input("please insert the proximity to liquid surfaces: ")
         soil_umidity= input("please insert the coeficient for soil humidity: ")
-        functions.add_one(slope_name,slope_lat,declivity,houses_per_square_meter,trees_per_square_meter,liquid_proximity,soil_umidity)
+        functions.add_one(slope_name,slope_lat,declivity,houses_per_square_meter,
+        trees_per_square_meter,liquid_proximity,soil_umidity)
         continue
 
     elif value == 3:
