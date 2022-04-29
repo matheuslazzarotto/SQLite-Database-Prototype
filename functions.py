@@ -38,15 +38,6 @@ def add_many(list):
     conn.commit()
     conn.close()
     
-# def fetch_one(id):
-#     conn = sqlite3.connect('customer.db')
-#     c = conn.cursor()
-#     c.execute("SELECT * from customers WHERE rowid = (?)", id)
-#     row = c.fetchone()
-#     print(row)
-#     conn.commit()
-#     conn.close()
-    
 def fetch_one(id, op):
     conn = sqlite3.connect('customer.db')
     c = conn.cursor()
