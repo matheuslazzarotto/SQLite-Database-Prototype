@@ -7,3 +7,5 @@ a prototype that I'm working on for my uni project, which consists in using Pyth
 'table_creator.py' as you can probably guess creates a table. but it also creates the db that will store the table (in this case, 'landslide_database.db'. you can mess with the parameters and make new tables (or even new databases).
 
 'functions.py' is where all functions are stored.
+
+many thanks to freeCodeCamp, whose 'SQLite Databases With Python' course was extremely helpful. Many thanks to some friends as well (Aleixo, Isaac and Erick)
