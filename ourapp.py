@@ -1,4 +1,3 @@
-from termios import CINTR
 import functions
 import sqlite3
 
@@ -31,7 +30,7 @@ while(True):
     
     elif value == 4:
         id = str(input("insert the ID of the object you'd like to fetch: "))
-        op = input("Insert 1 to name, 2 to lastname and 3 to email!")
+        op = input("Insert [1] to fetch the first name, [2] for last name and [3] for e-mail: ")
         functions.fetch_one(id, op)
         continue
     break
