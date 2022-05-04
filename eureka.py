@@ -4,11 +4,12 @@ import sqlite3
 while(True):
     print(" ")
     print("Welcome to the database. Your options are:")
-    print("1 - Show the database's current contents;")
-    print("2 - Add an object to the database;")
-    print("3 - Delete an object from the database;")
-    print("4 - Fetch one object from the database;")
-    print("5 - End program.")
+    print("1 - Show the database's current slopes;")
+    print("2 - Add an slope to the database;")
+    print("3 - Delete a slope from the database;")
+    print("4 - Fetch one slope from the database;")
+    print("5 - Fetch a variable from one slope from the databse")
+    print("0 - End program.")
     print()
     value = float(input("Please choose an option: "))
     
@@ -40,4 +41,13 @@ while(True):
         id = str(input("insert the id of the object you'd like to fetch: "))
         functions.fetch_one(id)
         continue
-    break
+
+    # elif value == 5:
+    #     print("options: Slope #1")
+    #     rowid = str(input("insert the row-id of the object you'd like to fetch: "))
+    #     print("options: \n1 - slope name,\n2 - slope latitude,\n3 - slope longitude,\n4 - declivity,\n5 - houses per square meter,")
+    #     print("6 - trees per square meter,\n7 - liquid proximity,\n8 - soil umidity.")
+    #     columid = str(input("insert the column-id of the object you'd like to fetch: "))
+    #     functions.specific_fetch(rowid,columid)
+    #     continue
+    # break
