@@ -35,12 +35,22 @@ def add_many(list):
     conn.commit()
     conn.close()
     
-def fetch_one(id):
+def general_fetch(id):
     conn = sqlite3.connect('landslide_database.db')
     c = conn.cursor()
     c.execute("SELECT * from variables WHERE rowid = (?)", id)
     row = c.fetchone()
     print(row)
+    conn.commit()
+    conn.close()
+
+def specific_fetch(id,op):
+    conn = sqlite3.connect('landslide_database.db')
+    c = conn.cursor()
+    if op == 1:
+        c.execute("SELECT slope_name from variables WHERE rowid = (?)", id)
+    object = c.fetchone()
+    print(object)
     conn.commit()
     conn.close()
 

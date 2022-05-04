@@ -39,15 +39,12 @@ while(True):
     
     elif value == 4:
         id = str(input("insert the id of the object you'd like to fetch: "))
-        functions.fetch_one(id)
+        functions.general_fetch(id)
         continue
 
-    # elif value == 5:
-    #     print("options: Slope #1")
-    #     rowid = str(input("insert the row-id of the object you'd like to fetch: "))
-    #     print("options: \n1 - slope name,\n2 - slope latitude,\n3 - slope longitude,\n4 - declivity,\n5 - houses per square meter,")
-    #     print("6 - trees per square meter,\n7 - liquid proximity,\n8 - soil umidity.")
-    #     columid = str(input("insert the column-id of the object you'd like to fetch: "))
-    #     functions.specific_fetch(rowid,columid)
-    #     continue
+    elif value == 5:
+        op = str(input("insert [1] for the slope name: "))
+        id = str(input("insert the ID of the object you'd like to fetch: "))
+        functions.specific_fetch(id,op)
+        continue
     break
