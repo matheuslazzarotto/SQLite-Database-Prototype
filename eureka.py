@@ -44,7 +44,7 @@ while(True):
 
     elif value == 5:
         id = (input("insert the ID of the object you'd like to fetch: "))
-        op = (input("insert [1] for the slope name: "))
+        op = int(input("insert [1] for the slope name: "))
         functions.specific_fetch(id,op)
         continue
     

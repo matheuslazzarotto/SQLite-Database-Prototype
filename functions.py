@@ -53,7 +53,6 @@ def specific_fetch(id,op):
     print("\n",row_c,"\n")
     conn.commit()
     conn.close()
-    return row_c
 
 #def specific_fetch(rowid,columnid):
     # conn = sqlite3.connect('landslide_database.db')
