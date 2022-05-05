@@ -49,10 +49,11 @@ def specific_fetch(id,op):
     c = conn.cursor()
     if op == 1:
         c.execute("SELECT slope_name from variables WHERE rowid = (?)", id)
-    object = c.fetchone()
-    print(object)
+    row_c = c.fetchone()
+    print("\n",row_c,"\n")
     conn.commit()
     conn.close()
+    return row_c
 
 #def specific_fetch(rowid,columnid):
     # conn = sqlite3.connect('landslide_database.db')
