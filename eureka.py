@@ -43,8 +43,12 @@ while(True):
         continue
 
     elif value == 5:
-        id = (input("insert the ID of the object you'd like to fetch: "))
-        op = int(input("insert [1] for the slope name: "))
+        id = (input("\ninsert the slope ID of the object you'd like to fetch: "))
+        print("\n\ninsert below the specific value you'd like to fetch.\n\noptions: \n\n1 - slope name;")
+        print("2 - slope latitude;\n3 - slope longitude;\n4 - declivity;\n5 - houses per square meter;")
+        print("6 - trees per square meter,\n7 - liquid proximity,\n8 - soil umidity.")
+
+        op = int(input("insert here: "))
         functions.specific_fetch(id,op)
         continue
     
