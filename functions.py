@@ -51,28 +51,28 @@ def specific_fetch(id,op):
     c = conn.cursor()
     if op == 1:
         c.execute("SELECT slope_name from variables WHERE rowid = (?)", id)
-        print(oplist[0])
+        print("\n",4oplist[0])
     elif op == 2:
         c.execute("SELECT slope_lat from variables WHERE rowid = (?)", id)
-        print(oplist[1])
+        print("\n",oplist[1])
     elif op == 3:
         c.execute("SELECT slope_long from variables where rowid = (?)", id)
-        print(oplist[2])
+        print("\n",oplist[2])
     elif op == 4:
         c.execute("SELECT declivity from variables where rowid = (?)", id)
-        print(oplist[3])
+        print("\n",oplist[3])
     elif op == 5:
         c.execute("SELECT houses_per_square_meter from variables where rowid = (?)", id)
-        print(oplist[4])
+        print("\n",oplist[4])
     elif op == 6:
         c.execute("SELECT trees_per_square_meter from variables where rowid = (?)", id)
-        print(oplist[5])
+        print("\n",oplist[5])
     elif op == 7:
         c.execute("SELECT liquid_proximity from variables where rowid = (?)", id)
-        print(oplist[6])
+        print("\n",oplist[6])
     elif op == 8:
         c.execute("SELECT soil_umidity from variables where rowid = (?)", id)
-        print(oplist[7])
+        print("\n",oplist[7])
     else:
         print("error: no such value, please try again.")
     row_c = c.fetchone()
