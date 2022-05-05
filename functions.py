@@ -45,24 +45,34 @@ def general_fetch(id):
     conn.close()
 
 def specific_fetch(id,op):
+    oplist=('slope name:','slope latitude:','slope longitude:','declivity:','houses per square meter:',
+    'trees per square meter:','proximity to liquid surfaces:','coeficient of soil umidity:')
     conn = sqlite3.connect('landslide_database.db')
     c = conn.cursor()
     if op == 1:
         c.execute("SELECT slope_name from variables WHERE rowid = (?)", id)
+        print(oplist[0])
     elif op == 2:
         c.execute("SELECT slope_lat from variables WHERE rowid = (?)", id)
+        print(oplist[1])
     elif op == 3:
         c.execute("SELECT slope_long from variables where rowid = (?)", id)
+        print(oplist[2])
     elif op == 4:
         c.execute("SELECT declivity from variables where rowid = (?)", id)
+        print(oplist[3])
     elif op == 5:
         c.execute("SELECT houses_per_square_meter from variables where rowid = (?)", id)
+        print(oplist[4])
     elif op == 6:
         c.execute("SELECT trees_per_square_meter from variables where rowid = (?)", id)
+        print(oplist[5])
     elif op == 7:
         c.execute("SELECT liquid_proximity from variables where rowid = (?)", id)
+        print(oplist[6])
     elif op == 8:
         c.execute("SELECT soil_umidity from variables where rowid = (?)", id)
+        print(oplist[7])
     else:
         print("error: no such value, please try again.")
     row_c = c.fetchone()
