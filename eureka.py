@@ -3,7 +3,7 @@ import sqlite3
 
 while(True):
     print(" ")
-    print("Welcome to the database. Your options are:")
+    print(" Successful login. Welcome to the Eureka database. Your options are:")
     print("1 - Show the database's current slopes;")
     print("2 - Add an slope to the database;")
     print("3 - Delete a slope from the database;")
