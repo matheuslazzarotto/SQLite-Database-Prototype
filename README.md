@@ -9,10 +9,10 @@ a prototype that @matheuslazzarotto and @LucasDfRocha are working on for a uni p
 currently you can [1] show all lines, [2] delete a line, [3] add a line, [4] fetch a specific line and [5] fetch a value inside a specific line.
 
 ### to-do:
-- a less ugly GUI
 - index
 - sort by fuction
-- alter by line
-- alter by line/row
+- a less ugly GUI
+- alter by line function
+- alter by line/row function
 
 shout-out to freeCodeCamp, whose 'SQLite Databases With Python' course was extremely helpful. many thanks to some friends as well (Aleixo, Adolfo, Isaac and Erick)
