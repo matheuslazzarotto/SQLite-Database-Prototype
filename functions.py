@@ -51,7 +51,7 @@ def specific_fetch(id,op):
     c = conn.cursor()
     if op == 1:
         c.execute("SELECT slope_name from variables WHERE rowid = (?)", id)
-        print("\n",4oplist[0])
+        print("\n",oplist[0])
     elif op == 2:
         c.execute("SELECT slope_lat from variables WHERE rowid = (?)", id)
         print("\n",oplist[1])
