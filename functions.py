@@ -1,6 +1,5 @@
 import sqlite3
 
-
 def show_all():
     conn = sqlite3.connect('landslide_database.db')
     c = conn.cursor()
@@ -25,13 +24,6 @@ def delete_one(id):
     conn = sqlite3.connect('landslide_database.db')
     c = conn.cursor()
     c.execute("DELETE from variables WHERE rowid = (?)", id)
-    conn.commit()
-    conn.close()
-
-def add_many(list):
-    conn = sqlite3.connect('landslide_database.db')
-    c = conn.cursor()
-    c.executemany("INSERT INTO variables VALUES (?,?,?)", (list))
     conn.commit()
     conn.close()
     
