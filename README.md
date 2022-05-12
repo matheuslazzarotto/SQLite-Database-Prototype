@@ -1,6 +1,6 @@
 #SQLite-Database-Prototype
 
-a prototype that @matheuslazzarotto and @LucasDfRocha are working on for our uni project, which consists in using Python, Tkinter and SQLite to prototype a database that will store variables that are used in the calculation of a landslide.
+a prototype that @matheuslazzarotto and @LucasDfRocha are working on for a uni project, which consists in using Python, Tkinter and SQLite to prototype a database that will store variables that are used in the calculation of a landslide.
 
 loginEureka.py is the main app containing the login page. It refers to eureka.py which runs on the terminal as soon as login is successful. eureka.py refers to the database functions at functions.py
 
