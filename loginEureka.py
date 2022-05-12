@@ -24,8 +24,6 @@ def login_sucess():
     popUp2.geometry("150x100")
     Label(popUp2,text = "O seu Login foi um sucesso!").pack()
     Button(popUp2,text= "OK",command = delete_popUp2).pack()
-    #popUpx.destroy()
-    
 
 def password_not_recognised():
 
