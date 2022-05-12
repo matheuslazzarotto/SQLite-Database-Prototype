@@ -8,7 +8,7 @@ a prototype that @matheuslazzarotto and @LucasDfRocha are working on for a uni p
 
 currently you can [1] show all lines, [2] delete a line, [3] add a line, [4] fetch a specific line and [5] fetch a value inside a specific line.
 
-### to-do:
+### - to-do:
 - a less ugly GUI
 - index
 - sort by fuction
