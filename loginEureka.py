@@ -1,7 +1,6 @@
 from tkinter import * #type: ignore
 import os
 
-cont = 0
 def delete_popUp4():
     popUp4.destroy()
 
