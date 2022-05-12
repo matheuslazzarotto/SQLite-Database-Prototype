@@ -15,4 +15,4 @@ currently you can [1] show all lines, [2] delete a line, [3] add a line, [4] fet
 - alter by line function
 - alter by line/row function
 
-shout-out to freeCodeCamp, whose ['SQLite Databases With Python'](https://www.youtube.com/watch?v=byHcYRpMgI4) course was extremely helpful. many thanks to some friends as well (Aleixo, Adolfo, Isaac and Erick)
+shout-out to freeCodeCamp, whose [SQLite Databases With Python](https://www.youtube.com/watch?v=byHcYRpMgI4) course was extremely helpful. many thanks to some friends as well (Aleixo, Adolfo, Isaac and Erick)
