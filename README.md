@@ -2,7 +2,8 @@
 
 a prototype that me and [@LucasdfRocha](https://github.com/LucasdfRocha) are working on for a uni project, which consists in using Python, Tkinter, and SQLite to prototype a database that will store variables that are used in the calculation of a landslide.
 
-_"loginEureka.py"_ is the main app containing the login page and it's own functions. It refers to _"eureka.py"_, the database app that runs on terminal when login is successful. all the database functions that _"eureka.py"_ uses are referred to _"functions.py"_
+_"loginEureka.py"_ is the app that needs to be run. It also constains the functions responsible for the login and refers to _"eureka.py"_, the database app that runs on terminal when login is successful. all the database functions that _"eureka.py"_ uses are referred to _"functions.py"_.
+
 currently you can [1] show all lines, [2] delete a line, [3] add a line, [4] fetch a specific line and [5] fetch a value inside a specific line.
 
 ### to-do:
