@@ -1,4 +1,3 @@
-from calendar import c
 import functions
 import sqlite3
 
