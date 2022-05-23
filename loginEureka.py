@@ -49,45 +49,50 @@ def user_not_found():
     Button(popUp4,text= "OK",command = delete_popUp4).pack()
 
 def register_verify():
-
+    global username_info
+    global password_info
     username_info = email.get()
     password_info = password.get()
 
-    with open("Login.csv",mode = 'r',newline = "") as g:
-        reader2 = csv.reader(g,delimiter = ",")
+    with open("Login.csv",mode = 'r') as g:
+        reader2 = csv.reader(g)
+        global conta_existente
+        conta_existente = 0
+    
         for row in reader2:
             if row == [username_info,password_info]:
+                conta_existente += 1
+
+            elif conta_existente == 1:
                 erro = Label(popUp,text = "Email ja foi utilizado!",fg = "red",font = ("calibri",11))
                 erro.pack()
                 user_entry.delete(0,END)
                 password_entry.delete(0,END)
+    
 
 def register_user():
 
-    with open("Login.csv",'a') as f:
-        virg = ','.join(lista)
-        f.writelines(virg + '\n')
-       
+    username_info = lista.append(email.get())
+    password_info = lista.append(password.get())
+
+    register_verify()
+
+    if conta_existente == 0:
+        with open('Login.csv','a') as f:
+            virg = ','.join(lista)
+            f.writelines(virg + "\n")
+        Label(popUp,text = "Registrado com sucesso!",fg = "green",font = ("calibri",11)).pack()
         
-
-
-'''
-        if username_info != username1:
-            writer.writerow([username_info,password_info])
-    
-            user_entry.delete(0,END)
-            password_entry.delete(0,END)
-
-            Label(popUp,text = "Registrado com sucesso!",fg = "green",font = ("calibri",11)).pack()
-        else:
-            register_verify()
-'''
 def log_verify():
 
     global username1
     global password1
+
+    username1 = StringVar()
+    password1 = StringVar()
     username1 = username_verify.get()
     password1 = password_verify.get()
+
     userLog_entry.delete(0,END)
     passwordLog_entry.delete(0,END)
 
