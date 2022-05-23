@@ -1,5 +1,9 @@
+import csv
 from tkinter import * #type: ignore
 import os
+from csv import *
+
+lista = []
 
 def delete_popUp4():
     popUp4.destroy()
@@ -19,7 +23,7 @@ def login_sucess():
     global popUp2
 
     popUp2 = Toplevel(janela)
-    popUp2.title("Sucess")
+    popUp2.title("Sucesso")
     popUp2.geometry("150x100")
     Label(popUp2,text = "O seu Login foi um sucesso!").pack()
     Button(popUp2,text= "OK",command = delete_popUp2).pack()
@@ -44,50 +48,61 @@ def user_not_found():
     Label(popUp4,text = "Senhas e/ou email invalidos").pack()
     Button(popUp4,text= "OK",command = delete_popUp4).pack()
 
-def register_user():
+def register_verify():
 
     username_info = email.get()
     password_info = password.get()
 
-    verificadorUser = os.listdir()
+    with open("Login.csv",mode = 'r',newline = "") as g:
+        reader2 = csv.reader(g,delimiter = ",")
+        for row in reader2:
+            if row == [username_info,password_info]:
+                erro = Label(popUp,text = "Email ja foi utilizado!",fg = "red",font = ("calibri",11))
+                erro.pack()
+                user_entry.delete(0,END)
+                password_entry.delete(0,END)
 
-    if username_info not in verificadorUser: 
-        file = open(username_info,"w")
-        file.write(username_info+"\n")
-        file.write(password_info)
-        file.close()
-        
-        user_entry.delete(0,END)
-        password_entry.delete(0,END)
+def register_user():
 
-        Label(popUp,text = "Registrado com sucesso!",fg = "green",font = ("calibri",11)).pack()
-
-    else:
-        erro = Label(popUp,text = "Email ja foi utilizado!",fg = "red",font = ("calibri",11))
-        erro.pack()
-        user_entry.delete(0,END)
-        password_entry.delete(0,END)
+    with open("Login.csv",'a') as f:
+        virg = ','.join(lista)
+        f.writelines(virg + '\n')
+       
         
 
+
+'''
+        if username_info != username1:
+            writer.writerow([username_info,password_info])
+    
+            user_entry.delete(0,END)
+            password_entry.delete(0,END)
+
+            Label(popUp,text = "Registrado com sucesso!",fg = "green",font = ("calibri",11)).pack()
+        else:
+            register_verify()
+'''
 def log_verify():
 
     global username1
+    global password1
     username1 = username_verify.get()
     password1 = password_verify.get()
     userLog_entry.delete(0,END)
     passwordLog_entry.delete(0,END)
 
-    list_of_files = os.listdir()
-
-    if username1 in list_of_files:
-        file1 = open(username1,"r")
-        verify = file1.read().splitlines()
-        if password1 in verify:
-            login_sucess()
-        else:
-            password_not_recognised()
-    else:
-        user_not_found()
+    with open("Login.csv",mode = "r") as f:
+        reader = csv.reader(f)
+        existe =0
+        for row in reader:
+            if row == [username1,password1]:
+                existe += 1
+                login_sucess()
+            
+        if existe == 0:
+            user_not_found()
+            
+                
 
 def register():
     global popUp
