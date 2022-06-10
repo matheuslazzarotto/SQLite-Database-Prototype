@@ -3,32 +3,32 @@ import sqlite3
 
 while(True):
     print()
-    print("Welcome to the Eureka database. Your options are:")
-    print("1 - Show the database's current slopes;")
-    print("2 - Add an slope to the database;")
-    print("3 - Delete a slope from the database;")
-    print("4 - Fetch one slope from the database;")
-    print("5 - Fetch a variable from one slope from the databse")
-    print("6 - Update the variables from a slope")
-    print("7 - Add a new variable type")
-    print("8 - Delete a variable type")
-    print("0 - End program.")
+    print("Bem vindo ao banco de dados EUREKA, essas são suas opções:")
+    print("1 - mostrar as encostas presentes no banco de dados;")
+    print("2 - adicionar uma encosta ao banco de dados;")
+    print("3 - Deletar uma encosta do banco de dados;")
+    print("4 - visualizar uma encosta em especifica;")
+    print("5 - visualizar uma varivel de uma encosta")
+    print("6 - Atualizar as variáves de uma encosta")
+    print("7 - Adicionar uma variável")
+    print("8 - Deletar uma váriavel")
+    print("0 - Encerrar o programa")
     print()
-    value = float(input("Please choose an option: "))
+    value = float(input("Por favor insira uma opção: "))
     
     if value == 1:
         functions.show_all()
         continue
 
     elif value == 2:
-        slope_name= input("please insert the name of the slope: ")
-        slope_lat= input("please insert the slope latitude: ")
-        slope_long= input("please insert the slope longitude: ")
-        declivity= input("please insert the slope's declivity: ")
-        houses_per_square_meter= input("please insert the number of houses per square meter: ")
-        trees_per_square_meter= input("please insert the number of trees per square meter: ")
-        liquid_proximity= input("please insert the proximity to liquid surfaces: ")
-        soil_umidity= input("please insert the coeficient for soil humidity: ")
+        slope_name= input("Por favor insira o nome da encosta: ")
+        slope_lat= input("Insira a latitude da encosta: ")
+        slope_long= input("Insira a longitude: ")
+        declivity= input("Insira a declividade: ")
+        houses_per_square_meter= input("Insira a quantidade de casas por metro quadrado: ")
+        trees_per_square_meter= input("Insira a quantidade de arvores por metro quadrado: ")
+        liquid_proximity= input("Por favor insira a proximidade de superfícies líquidas: ")
+        soil_umidity= input("insira o coeficiente de umidade do solo: ")
 
         functions.add_one(slope_name,slope_lat,slope_long,declivity,houses_per_square_meter,
         trees_per_square_meter,liquid_proximity,soil_umidity)
@@ -36,35 +36,35 @@ while(True):
         continue
 
     elif value == 3:
-        id = str(input("insert the id of the object you'd like to delete: "))
+        id = str(input("Insira o id da encosta que voce deseja remover: "))
         functions.delete_one(id)
         continue
     
     elif value == 4:
-        id = str(input("insert the id of the object you'd like to fetch: "))
+        id = str(input("Insira o id da encosta que voce deseja ver: "))
         functions.general_fetch(id)
         continue
 
     elif value == 5:
-        id = (input("\ninsert the slope ID of the object you'd like to fetch: "))
-        print("\n\ninsert below the specific value you'd like to fetch.\n\noptions: \n\n1 - slope name;")
-        print("2 - slope latitude;\n3 - slope longitude;\n4 - declivity;\n5 - houses per square meter;")
-        print("6 - trees per square meter,\n7 - liquid proximity,\n8 - soil umidity.")
+        id = (input("\nInsira o id da encosta que voce deseja ver: "))
+        print("\n\nInsira abaixo qual das opções você deseja visualizar.\n\nopções: \n\n1 - nome da encosta;")
+        print("2 - latitude ;\n3 - longitude;\n4 - declividade;\n5 - casas por metro quadrado;")
+        print("6 - arvores por metro quadrado,\n7 - proximidades de liquidos,\n8 - umidade do solo.")
 
-        op = int(input("insert here: "))
+        op = int(input("Insira aqui: "))
         functions.specific_fetch(id,op)
         continue
 
     elif value == 6:
-        columnName = (input("\ninsert the name of the new variable type: "))
+        columnName = (input("\nInsira o nome da variável que voce deseja atualizar: "))
         functions.addColumn(columnName)
     
     elif value == 7:
-        columnName = (input("\ninsert the name of the new variable type: "))
+        columnName = (input("\nInsira o nome da variavel que voce deseja adicionar: "))
         functions.addColumn(columnName) 
     
     elif value == 8:
-        columnName = (input("\ninsert the name of the new variable type: "))
+        columnName = (input("\nInsira a variavel que voce deseja remover: "))
         functions.modifyColumn(columnName)
 
     else:

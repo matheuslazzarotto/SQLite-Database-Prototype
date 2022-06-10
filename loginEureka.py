@@ -1,7 +1,5 @@
 import csv
 from tkinter import * #type: ignore
-import os
-from csv import *
 
 lista = []
 
@@ -60,14 +58,15 @@ def register_verify():
         conta_existente = 0
     
         for row in reader2:
-            if row == [username_info,password_info]:
+            if row == [username_info]:
                 conta_existente += 1
 
-            elif conta_existente == 1:
+            if conta_existente == 1:
                 erro = Label(popUp,text = "Email ja foi utilizado!",fg = "red",font = ("calibri",11))
                 erro.pack()
                 user_entry.delete(0,END)
                 password_entry.delete(0,END)
+                break
     
 
 def register_user():
@@ -98,7 +97,7 @@ def log_verify():
 
     with open("Login.csv",mode = "r") as f:
         reader = csv.reader(f)
-        existe =0
+        existe = 0
         for row in reader:
             if row == [username1,password1]:
                 existe += 1
@@ -107,8 +106,6 @@ def log_verify():
         if existe == 0:
             user_not_found()
             
-                
-
 def register():
     global popUp
     popUp = Toplevel(janela)
