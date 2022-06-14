@@ -92,15 +92,3 @@ def modifyColumn(columnName):
     c = conn.cursor()
     c.execute("UPDATE variables SET columnName = int")
     print(columnName," has been added.")
-
-#def specific_fetch(rowid,columnid):
-    # conn = sqlite3.connect('landslide_database.db')
-    # c = conn.cursor()
-    # c.execute("SELECT * from variables WHERE rowid = (?)",rowid)
-    # c.execute("SELECT * from variables WHERE columnid = (?)",columnid)
-    # c.fetchone()
-    # print()
-    # conn.comit()
-    # conn.close()
-
-#def create_index(https://www.sqlite.org/lang_createindex.html)
