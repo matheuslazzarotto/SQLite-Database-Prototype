@@ -9,10 +9,7 @@ while(True):
     print("3 - Deletar uma encosta do banco de dados;")
     print("4 - visualizar uma encosta em especifica;")
     print("5 - visualizar uma varivel de uma encosta")
-    print("6 - Atualizar as variáves de uma encosta")
-    print("7 - Adicionar uma variável")
-    print("8 - Deletar uma váriavel")
-    print("0 - Encerrar o programa")
+    print("0 - End program.")
     print()
     value = float(input("Por favor insira uma opção: "))
     
@@ -51,22 +48,10 @@ while(True):
         print("2 - latitude ;\n3 - longitude;\n4 - declividade;\n5 - casas por metro quadrado;")
         print("6 - arvores por metro quadrado,\n7 - proximidades de liquidos,\n8 - umidade do solo.")
 
-        op = int(input("Insira aqui: "))
+        op = int(input("insira aqui: "))
         functions.specific_fetch(id,op)
         continue
-
-    elif value == 6:
-        columnName = (input("\nInsira o nome da variável que voce deseja atualizar: "))
-        functions.addColumn(columnName)
     
-    elif value == 7:
-        columnName = (input("\nInsira o nome da variavel que voce deseja adicionar: "))
-        functions.addColumn(columnName) 
-    
-    elif value == 8:
-        columnName = (input("\nInsira a variavel que voce deseja remover: "))
-        functions.modifyColumn(columnName)
-
     else:
         break
 
