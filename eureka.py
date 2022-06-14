@@ -8,10 +8,7 @@ while(True):
     print("2 - Add an slope to the database;")
     print("3 - Delete a slope from the database;")
     print("4 - Fetch one slope from the database;")
-    print("5 - Fetch a variable from one slope from the databse")
-    #print("6 - Update the variables from a slope")
-    #print("7 - Add a new variable type")
-    #print("8 - Delete a variable type")
+    print("5 - Fetch a variable from one slope from the database")
     print("0 - End program.")
     print()
     value = float(input("Please choose an option: "))
@@ -54,18 +51,6 @@ while(True):
         op = int(input("insert here: "))
         functions.specific_fetch(id,op)
         continue
-
-    # elif value == 6:
-    #     columnName = (input("\ninsert the name of the new variable type: "))
-    #     functions.addColumn(columnName)
     
-    # elif value == 7:
-    #     columnName = (input("\ninsert the name of the new variable type: "))
-    #     functions.addColumn(columnName) 
-    
-    # elif value == 8:
-    #     columnName = (input("\ninsert the name of the new variable type: "))
-    #     functions.modifyColumn(columnName)
-
     else:
         break
